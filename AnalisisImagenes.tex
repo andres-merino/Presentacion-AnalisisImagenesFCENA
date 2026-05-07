@@ -1,0 +1,85 @@
+\documentclass[aspectratio=169]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Paquetes
+\input{formatoBeamerPUCE}
+\usepackage{tikz}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{matrix, positioning}
+\usetikzlibrary{calc}
+
+\usepackage{qrcode}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Datos
+\title{Reconocimiento automático de imágenes para reconstrucción de redes planta-polinizador}
+\author{Andrés Merino T.}
+\date{Abril 2025}
+\institute{Facultad de Ciencias Exactas, Naturales y Ambientales}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Página de título
+
+\fondo{inicio}
+\begin{frame}[plain]
+    \vspace*{0.85cm}
+    \addtocounter{framenumber}{-1}
+    \hspace*{0.6cm}
+    \begin{minipage}[t]{\dimexpr\textwidth-1cm}
+        \titlepage
+    \end{minipage}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Página de índice
+\fondo{blanco}
+\begin{frame}
+    \frametitle{Contenido}
+    \vspace*{-0.5cm}
+
+    \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Secciones
+% --- Parte divulgativa ---
+\include{Secciones/00Motivacion}
+\include{Secciones/02Imagen}
+\include{Secciones/04Redes}
+% --- Trabajo de investigación ---
+\include{Secciones/03Implementacion}
+\include{Secciones/04Conclusiones}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Página final
+\fondo{final}
+\begin{frame}[plain]
+\begin{center}
+    \color{white}
+
+    \vspace{1.5cm}
+    {\Huge\textbf{Gracias}}
+    \vspace{2mm}
+
+
+    \begin{tabular}{ccc}
+        \color{azul!60!black}\qrcode[hyperlink,height=2.5cm]{https://linktr.ee/aemerinot}
+        &\phantom{.\hspace{.5cm}.}&
+        \color{azul!60!black}\qrcode[hyperlink,height=2.5cm]{https://github.com/andres-merino/Presentacion-ChatGPT-AulaInvertida}
+        \\[1.3cm]
+        \LARGE \faLinkedin\hspace{5mm} \faGithub%\hspace{5mm} \aiOrcidSquare
+        &&
+        Presentación
+    \end{tabular}
+
+    \vspace{2mm}
+    \textbf{Contacto:} aemerinot@puce.edu.ec
+\end{center}
+\end{frame}
+
+
+\end{document}

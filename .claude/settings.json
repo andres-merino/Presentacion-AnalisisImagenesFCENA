@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep \"\\\\\\\\\\\\\\\\include\" \"c:/Users/aemerinot/Dropbox \\(Personal\\)/Aplicaciones/Overleaf/Presentacion-AnalisisImagenesFCENA/AnalisisImagenes.tex\")"
+    ]
+  }
+}

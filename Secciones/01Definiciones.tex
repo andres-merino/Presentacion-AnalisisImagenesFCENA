@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fondo{celeste}
+\section{Conceptos básicos}
+\fondo{blanco}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \frametitle{Definición de Procesamiento y Análisis de Imágenes}
+    \begin{columns}
+    \column{.5\textwidth}
+    \begin{block}{Procesamiento de Imágenes:}
+        \begin{itemize}
+            \item Ingresa una imagen y sale una imagen.
+            \item Ejemplo: Segmentación.
+        \end{itemize}
+    \end{block}
+    
+    \column{.5\textwidth}
+    \begin{block}{Análisis de Imágenes:}
+        \begin{itemize}
+            \item Ingresa una imagen y sale un resultado.
+            \item Ejemplo: Clasificación.
+        \end{itemize}
+    \end{block}
+    \end{columns}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+    \tikzstyle{block} = [rectangle, draw, rounded corners]
+
+\begin{center}
+    
+\begin{tikzpicture}[node distance=1.5cm, auto]
+    % Nodos
+    \node (camara) [node distance=0.5cm] 
+        {\scalebox{2.5}{\faCamera}};
+    \node (mundo) [node distance=1cm, right of=camara] 
+        {\rotatebox{90}{\textbf{Mundo circundante}}};
+    \node (captura) [block, right of=mundo, fill=celeste!60] 
+        {\rotatebox{90}{Captura de la imagen}};
+    \node (pretratamiento) [block, right of=captura, fill=celeste!50] 
+        {\rotatebox{90}{Pre-tratamiento}};
+    \node (segmentacion) [block, right of=pretratamiento, fill=celeste!40] 
+        {\rotatebox{90}{Segmentación}};
+    \node (extraccion) [block, right of=segmentacion, node distance=1.8cm, fill=celeste!30] 
+        {\rotatebox{90}{\parbox{3cm}{\centering Extracción de caracterísiticas}}};
+    \node (deteccion) [block, right of=extraccion, node distance=2.3cm, fill=celeste!20] 
+        {\rotatebox{90}{\parbox{3.5cm}{\centering Detección \\ Reconocimiento \\ Interpretación}}};
+    \node (resultado) [right of=deteccion, node distance=2cm] 
+        {\rotatebox{90}{\textbf{Resultado}}};
+    \node (result) [right of=resultado, node distance=1cm] 
+        {\scalebox{2.5}{\faCheckSquare}};
+
+    % Flechas
+    \draw[->] (mundo) -- (captura);
+    \draw[->] (captura) -- (pretratamiento);
+    \draw[->] (pretratamiento) -- (segmentacion);
+    \draw[->] (segmentacion) -- (extraccion);
+    \draw[->] (extraccion) -- (deteccion);
+    \draw[->] (deteccion) -- (resultado);
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
